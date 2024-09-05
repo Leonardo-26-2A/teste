@@ -82,7 +82,7 @@ function makeChoice(choiceIndex) {
     if (currentStep < dialogues.length) {
         setTimeout(updateDialogue, 2000); // Espera 2 segundos antes de mostrar a próxima pergunta
     } else {
-        endGame();
+        console.log ("cabo")
     }
 
 
