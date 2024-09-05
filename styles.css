@@ -45,8 +45,17 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
+    margin: 5px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+#reset-button {
+    background-color: #f44336;
+}
+
+#reset-button:hover {
+    background-color: #e53935;
 }
