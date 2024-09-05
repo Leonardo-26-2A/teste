@@ -93,7 +93,39 @@ function resetGame() {
     document.getElementById('choices-container').style.display = 'block';
 }
 
+function startGame() {
+    document.getElementById('start-screen').style.display = 'none';
+    document.getElementById('game-container').style.display = 'block';
+    updateDialogue();
+}
+
 // Função para criar corações caindo
 function createHearts() {
     const container = document.getElementById('hearts-container');
-    for (let
+    for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        heart.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(heart);
+    }
+}
+
+// Função para criar confetes
+function showConfetti() {
+    const container = document.getElementById('confetti-container');
+    container.innerHTML = ''; // Limpa confetes anteriores
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = Math.random() * 100 + 'vh';
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = confetti.style.width;
+        confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        container.appendChild(confetti);
+    }
+}
+
+createHearts();
