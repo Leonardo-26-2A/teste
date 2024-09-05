@@ -9,9 +9,17 @@
 <body>
     <div id="hearts-container"></div>
     <div id="confetti-container"></div>
-    <div id="game-container">
+    
+    <!-- Tela de Início -->
+    <div id="start-screen">
+        <h1>Romance na Escola: Clara e Leonardo</h1>
+        <p>Bem-vindo ao jogo! Descubra o que acontece entre Clara e Leonardo na escola.</p>
+        <button id="start-button" onclick="startGame()">Começar Jogo</button>
+    </div>
+    
+    <!-- Tela do Jogo -->
+    <div id="game-container" style="display:none;">
         <div id="game-screen">
-            <h1>Romance na Escola: Clara e Leonardo</h1>
             <div id="dialogue-box">
                 <p id="dialogue-text">Bem-vindo ao jogo! Clique no botão abaixo para começar.</p>
             </div>
@@ -23,6 +31,7 @@
             <button id="reset-button" style="display:none;" onclick="resetGame()">Reiniciar</button>
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
