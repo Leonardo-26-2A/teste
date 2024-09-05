@@ -70,6 +70,39 @@ body {
     }
 }
 
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#start-screen h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#start-screen p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#start-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #e91e63; /* Rosa forte */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#start-button:hover {
+    background-color: #c2185b; /* Rosa escuro */
+}
+
 #game-container {
     position: relative;
     width: 80%;
@@ -98,32 +131,4 @@ body {
 }
 
 .choice-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #e91e63; /* Rosa forte */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin: 5px 0;
-}
-
-.choice-button:hover {
-    background-color: #c2185b; /* Rosa escuro */
-}
-
-#reset-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #f44336; /* Vermelho */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-#reset-button:hover {
-    background-color: #e53935; /* Vermelho escuro */
-}
+    display: block
