@@ -82,15 +82,22 @@ function makeChoice(choiceIndex) {
     if (currentStep < dialogues.length) {
         setTimeout(updateDialogue, 2000); // Espera 2 segundos antes de mostrar a próxima pergunta
     } else {
-        document.getElementById('choices-container').style.display = 'none';
+        endGame();
     }
+}
+
+function endGame() {
+    document.getElementById('choices-container').style.display = 'none';
+    document.getElementById('reset-button').style.display = 'block';
 }
 
 function resetGame() {
     currentStep = 0;
-    updateDialogue();
-    document.getElementById('reset-button').style.display = 'none';
+    document.getElementById('dialogue-text').textContent = "Bem-vindo ao jogo! Clique no botão abaixo para começar.";
     document.getElementById('choices-container').style.display = 'block';
+    document.getElementById('reset-button').style.display = 'none';
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
 }
 
 function startGame() {
