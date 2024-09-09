@@ -82,13 +82,15 @@ function makeChoice(choiceIndex) {
     if (currentStep < dialogues.length) {
         setTimeout(updateDialogue, 2000); // Espera 2 segundos antes de mostrar a próxima pergunta
     } else {
-        console.log ("cabo")
+        endGame();
     }
-
+}
 
 function endGame() {
     document.getElementById('choices-container').style.display = 'none';
     document.getElementById('reset-button').style.display = 'block';
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
 }
 
 function resetGame() {
@@ -98,6 +100,7 @@ function resetGame() {
     document.getElementById('reset-button').style.display = 'none';
     document.getElementById('game-container').style.display = 'none';
     document.getElementById('start-screen').style.display = 'block';
+    clearHearts(); // Limpa corações ao reiniciar o jogo
 }
 
 function startGame() {
@@ -106,7 +109,6 @@ function startGame() {
     updateDialogue();
 }
 
-// Função para criar corações caindo
 function createHearts() {
     const container = document.getElementById('hearts-container');
     for (let i = 0; i < 30; i++) {
@@ -119,7 +121,11 @@ function createHearts() {
     }
 }
 
-// Função para criar confetes
+function clearHearts() {
+    const container = document.getElementById('hearts-container');
+    container.innerHTML = ''; // Limpa corações anteriores
+}
+
 function showConfetti() {
     const container = document.getElementById('confetti-container');
     container.innerHTML = ''; // Limpa confetes anteriores
@@ -135,4 +141,4 @@ function showConfetti() {
     }
 }
 
-createHearts();
+createHearts(); // Chama esta função para criar corações na inicialização do jogo
