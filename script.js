@@ -63,7 +63,6 @@ function updateDialogue() {
     document.getElementById('choice3').textContent = dialogue.choices[2];
     
     if (currentStep === dialogues.length - 1) {
-        document.getElementById('reset-button').style.display = 'block';
         document.getElementById('choices-container').style.display = 'none';
     }
 }
@@ -88,19 +87,8 @@ function makeChoice(choiceIndex) {
 
 function endGame() {
     document.getElementById('choices-container').style.display = 'none';
-    document.getElementById('reset-button').style.display = 'block';
     document.getElementById('game-container').style.display = 'none';
     document.getElementById('start-screen').style.display = 'block';
-}
-
-function resetGame() {
-    currentStep = 0;
-    document.getElementById('dialogue-text').textContent = "Bem-vindo ao jogo! Clique no botão abaixo para começar.";
-    document.getElementById('choices-container').style.display = 'block';
-    document.getElementById('reset-button').style.display = 'none';
-    document.getElementById('game-container').style.display = 'none';
-    document.getElementById('start-screen').style.display = 'block';
-    clearHearts(); // Limpa corações ao reiniciar o jogo
 }
 
 function startGame() {
