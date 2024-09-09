@@ -63,7 +63,7 @@ function updateDialogue() {
     document.getElementById('choice3').textContent = dialogue.choices[2];
     
     if (currentStep === dialogues.length - 1) {
-        document.getElementById('choices-container').style.display = 'none';
+        document.getElementById('choices-container').style.display = 'block'; // Garante que as escolhas apareçam na última etapa
     }
 }
 
