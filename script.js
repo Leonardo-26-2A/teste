@@ -73,8 +73,8 @@ function makeChoice(choiceIndex) {
     const response = dialogue.responses[choiceIndex];
     document.getElementById('dialogue-text').textContent = response;
     
-    //if (response.includes("Leonardo confessa que também tem sentimentos por você.") || response.includes("Leonardo está feliz em continuar se conhecendo e ver onde isso leva.")) {
-        //showConfetti();
+    if (response.includes("Leonardo confessa que também tem sentimentos por você.") || response.includes("Leonardo está feliz em continuar se conhecendo e ver onde isso leva.")) {
+        showConfetti();
     }
 
     currentStep++;
